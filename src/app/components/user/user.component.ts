@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-user',
   imports: [],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css',
+  template: '<h1 class="text-danger">Single File Component</h1>',
+  styles: ['.text-danger{ color: blue }'],
 })
 export class UserComponent {}
