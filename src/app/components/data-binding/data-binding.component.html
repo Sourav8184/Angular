@@ -1,0 +1,75 @@
+<h1>data-binding works!</h1>
+<div>
+  <div>
+    <h2>1. Interpolation (One-Way Binding: Component to View)</h2>
+    <h3>
+      Description: Displays data from the component in the view (HTML) using two
+      curly braces {{ '{{ }}' }}.
+      <br />
+      <br />
+      Use Case: Useful for binding string, number, or computed data directly in
+      the template.
+    </h3>
+    <br />
+    <p>First Name: {{ firstName }}</p>
+    <p>RollNo: {{ rollNo }}</p>
+    <p>isActive: {{ isActive }}</p>
+    <p>Current Date: {{ currentDate }}</p>
+  </div>
+  <br />
+  <div>
+    <h2>2. Property Binding (One-Way Binding: Component to View)</h2>
+    <h3>
+      Description: Binds a property of an HTML element or a directive to a
+      component property using [property] syntax. <br />
+      <br />
+      Use Case: Useful for setting attributes like src, disabled, hidden, etc.
+    </h3>
+    <br />
+    <input type="text" [value]="firstName" name="" id="" />
+    <br />
+    <input type="text" [placeholder]="myPlaceHolder" name="" id="" />
+  </div>
+  <br />
+  <div>
+    <h2>3. Event Binding (One-Way Binding: View to Component)</h2>
+    <h3>
+      Description: Binds an event from the view to a method in the component
+      using (event) syntax. Use Case: <br /><br />
+      Useful for handling user actions like clicks, keypresses, etc.
+    </h3>
+    <br />
+    <button class="btn" (click)="buttonIsClicked()">Click</button>
+    <br />
+    <br />
+    <select (change)="onCityChange($event)" name="" id="">
+      <option value="" disabled selected>Select the city</option>
+      <option value="Ludhiana">Ludhiana</option>
+      <option value="Kurukshetra">Kurukshetra</option>
+      <option value="Ambala">Ambala</option>
+    </select>
+  </div>
+  <br />
+  <div>
+    <h2>4. Two-Way Binding (Component to View and View to Component)</h2>
+    <h3>
+      Description: Allows simultaneous data flow between the component and the
+      view using [(ngModel)]. Requires FormsModule to be imported in AppModule.
+      <br /><br />
+      Use Case: Useful for forms and inputs.
+    </h3>
+    <br />
+    <input type="text" [(ngModel)]="firstName" />
+    <br />
+    <br />
+    <select [(ngModel)]="books" name="" id="">
+      <option value="" disabled selected>Select the Books</option>
+      <option value="Book 1">Book 1</option>
+      <option value="Book 2">Book 2</option>
+      <option value="Book 3">Book 3</option>
+      <option value="Book 4">Book 4</option>
+    </select>
+    {{ books }}
+    <br /><br />
+  </div>
+</div>
