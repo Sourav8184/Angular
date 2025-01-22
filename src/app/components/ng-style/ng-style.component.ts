@@ -5,7 +5,7 @@ import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ng-style',
-  imports: [NgStyle, FormsModule, RouterLink],
+  imports: [NgStyle, FormsModule],
   templateUrl: './ng-style.component.html',
   styleUrl: './ng-style.component.css',
 })

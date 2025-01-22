@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-user',
   imports: [RouterLink],
   template: `
-    <h1 class="text-danger">Single File Component</h1>
+    <h1 class="text-danger">User Single File Component</h1>
     <button class="btn btn-success p-2 m-1" routerLink="/dataBinding">
       Go To DataBinding
     </button>

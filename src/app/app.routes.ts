@@ -7,6 +7,7 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { NgIfComponent } from './components/ngIf/ngIf.component';
 import { NgForComponent } from './components/ngFor/ngFor.component';
+import { ControlStatementComponent } from './components/controlStatement/controlStatement.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,4 +19,5 @@ export const routes: Routes = [
   { path: 'ngStyle', component: NgStyleComponent },
   { path: 'ngFor', component: NgForComponent },
   { path: 'ngIf', component: NgIfComponent },
+  { path: 'control-flow', component: ControlStatementComponent },
 ];

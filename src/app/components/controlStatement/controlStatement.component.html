@@ -1,0 +1,59 @@
+<h1>Control Statement Component</h1>
+
+<div class="row">
+  @if(div1Visible){
+  <div class="col-3">
+    <div class="bg-success p-3">Div 1</div>
+  </div>
+  }
+  <div class="col-3">
+    @if(isChecked){
+    <div class="bg-primary p-3">Checkbox is checked</div>
+    }@else{
+    <div class="bg-danger p-3">Checkbox is unchecked</div>
+    }
+  </div>
+  <div class="col-3 btn btn-info">
+    @if(weekDay === 'mon'){<span>{{ "Monday" }}</span> }@else if (weekDay ===
+    'tue') {<span>{{ "Tuesday" }}</span
+    >}@else if (weekDay === 'wed') {<span>{{ "Wednesday" }}</span
+    >}@else if (weekDay === 'thu') {<span>{{ "Thursday" }}</span
+    >}@else if (weekDay === 'fri') {<span>{{ "Friday" }}</span
+    >}@else if (weekDay === 'sat') {<span>{{ "Saturday" }}</span
+    >}@else if (weekDay === 'sun') {<span>{{ "Sunday" }}</span
+    >}
+  </div>
+</div>
+
+<div class="row p-4">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showOrHide(true)">Show</button>
+    <button class="btn btn-danger" (click)="showOrHide(false)">Hide</button>
+  </div>
+  <div class="col-3">
+    <input type="checkbox" [(ngModel)]="isChecked" />
+  </div>
+  <div class="col-3">
+    <input
+      type="text"
+      [(ngModel)]="weekDay"
+      maxlength="3"
+      placeholder="First 3 letter of week days"
+    />
+  </div>
+</div>
+<br /><br />
+<div class="row">
+  <div class="col-3">
+    <select>
+      @for (city of cityList; track $index) {
+      <option>{{ city }}</option>
+      }
+    </select>
+  </div>
+  <div class="col-3">
+    @for (city of cityList; track $index) {
+    <button class="btn btn-secondary m-3">{{ city }}</button>
+    }
+  </div>
+</div>
