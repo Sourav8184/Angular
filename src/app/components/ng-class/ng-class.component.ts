@@ -1,6 +1,7 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgStyleComponent } from '../ng-style/ng-style.component';
 
 @Component({
   selector: 'app-ng-class',

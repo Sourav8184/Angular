@@ -1,5 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ngFor',
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./ngFor.component.css'],
 })
 export class NgForComponent {
+  constructor(private router: Router) {}
+  navigateToNgStyle() {
+    this.router.navigateByUrl('/ngStyle');
+  }
   cityList: string[] = ['Ludhiana', 'Pune', 'Jaipur', 'Mumbai', 'Saharanpur'];
   employee: any[] = [
     { id: 1, name: 'A', city: 'Ludhiana' },
