@@ -1,0 +1,65 @@
+<div class="row">
+  <h3>NgFor with array</h3>
+  <br />
+  <br />
+  <!-- using ul li -->
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let city of cityList">{{ city }}</li>
+    </ul>
+  </div>
+  <!-- using button -->
+  <div class="col-5">
+    <button class="btn btn-success m-2" *ngFor="let city of cityList">
+      {{ city }}
+    </button>
+  </div>
+  <!-- using div -->
+  <div class="col-5">
+    <div *ngFor="let city of cityList">
+      {{ city }}
+    </div>
+  </div>
+</div>
+<br /><br />
+<div class="row">
+  <h3>NgFor with Object</h3>
+  <br />
+  <br />
+  <!-- using ul li -->
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let emp of employee">
+        ID: {{ emp.id }} , Name: {{ emp.name }} , City: {{ emp.city }}
+      </li>
+    </ul>
+  </div>
+  <!-- using select -->
+  <div class="col-3">
+    <select>
+      <option *ngFor="let emp of employee" [value]="emp.id">
+        {{ emp.name }} - {{ emp.city }}
+      </option>
+    </select>
+  </div>
+  <br />
+  <!-- using table -->
+  <div class="col-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Name</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employee">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.city }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

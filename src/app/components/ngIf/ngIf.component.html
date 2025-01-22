@@ -1,0 +1,48 @@
+<p>
+  In Angular, structural directives are used to change the structure of the DOM
+  by adding or removing elements based on certain conditions. They control the
+  layout or the presence of elements in the DOM. They essentially manipulate the
+  structure of the DOM tree.
+</p>
+<h5>
+  Key Points about Structural Directives: <br />
+  1. They add, remove, or manipulate elements in the DOM. They are prefixed with
+  an asterisk (*).
+  <br />
+  2. They typically work by adding or removing elements based on conditions or
+  loops.
+</h5>
+<h4>Using *ngIf :-</h4>
+<br />
+<div>
+  <div class="row">
+    <div class="col-3" *ngIf="div1Visiable">
+      <div class="bg-success p-3">Div 1</div>
+    </div>
+    <div class="col-3">
+      <div class="bg-primary p-3" *ngIf="number1 === number2">Div 2</div>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-3 text-center">
+      <button class="btn btn-success" (click)="showDiv1()">Show</button>
+      <button class="btn btn-danger mx-5" (click)="hideDiv1()">Hide</button>
+    </div>
+
+    <div class="col-3">
+      <p>Input1 === Input2 then div2 showing</p>
+      <label for="">input 1: </label>
+      <input type="text" [(ngModel)]="number1" />
+      <br />
+      <label for="">input 2: </label>
+      <input type="text" [(ngModel)]="number2" />
+      <br />
+      both text are equal = {{ number1 === number2 }}
+    </div>
+  </div>
+</div>
+<br /><br />
+
+<h4>Using *ngFor</h4>
+<div></div>
