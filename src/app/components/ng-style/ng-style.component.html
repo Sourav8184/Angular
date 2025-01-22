@@ -1,0 +1,40 @@
+<h5>Dynamically applies inline styles to an element.</h5>
+<br /><br />
+
+<div class="row">
+  <div
+    class="col-3 p-4"
+    [ngStyle]="{
+      'background-color': bgColor,
+      'font-size': textSize,
+      color: textColor
+    }"
+  >
+    Div 1
+  </div>
+  <div
+    class="col-3 p-4"
+    [ngStyle]="{ 'background-color': isChecked === true ? 'teal' : 'blue' }"
+  >
+    Div 2
+  </div>
+  <div class="col-3" [ngStyle]="styleObject">Div 3</div>
+</div>
+
+<br />
+
+<div class="row">
+  <div class="col-3 p-4">
+    <button class="btn btn-success m-4" (click)="bgGreenAndChangeStyle()">
+      Green
+    </button>
+    <button class="btn btn-danger m-4" (click)="bgRedAndChangeStyle()">
+      Red
+    </button>
+  </div>
+
+  <div class="col-3">
+    <input type="checkbox" [(ngModel)]="isChecked" />
+    {{ isChecked }}
+  </div>
+</div>

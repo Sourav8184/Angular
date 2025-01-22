@@ -1,0 +1,74 @@
+<p>
+  In Angular, attribute directives are used to modify the appearance or behavior
+  of DOM elements. Unlike structural directives (which change the structure of
+  the DOM), attribute directives only affect the element they are applied to.
+</p>
+<h5>
+  Key Features of Attribute Directives: They add, remove, or modify the
+  properties of an element. <br />
+  1. They are typically applied as attributes in the element's opening tag.
+  <br />
+  2. Examples include ngClass, ngStyle, and custom attribute directives.
+</h5>
+<br /><br />
+<h3>NgClass</h3>
+<br />
+<div class="row">
+  <div class="col-3 p-3" [ngClass]="divBgColor">Div 1</div>
+  <div
+    class="col-3 p-3"
+    [ngClass]="isChecked === 'true' ? 'bg-success' : 'bg-danger'"
+  >
+    Div 2
+  </div>
+  <div
+    class="col-3 p-3"
+    [ngClass]="isCheckedBool === true ? 'bg-success' : 'bg-danger'"
+  >
+    Div 3
+  </div>
+  <!-- either you used NgClass -->
+  <div class="col-3 p-3" [ngClass]="div4Classname">Div 4</div>
+  <!-- or you used Property binding also -->
+
+  <div [class]="divBgColor">
+    Div 5 used Div 1 ngClass using property binding go to
+    ng-class.component.html and see!
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-success m-3" (click)="bgGreen('bg-success')">
+      Add Green
+    </button>
+    <button class="btn btn-danger m-3" (click)="bgRed('bg-danger')">
+      Add Red
+    </button>
+  </div>
+  <br />
+  <div class="col-3">
+    <!-- When the user clicks the checkbox:
+          If the checkbox is checked, isChecked becomes true.
+          If the checkbox is unchecked, isChecked becomes false.
+          This change is automatic because of Angular's two-way data binding. -->
+    <input type="text" [(ngModel)]="isChecked" />
+    {{ isChecked }}
+  </div>
+  <br />
+  <div class="col-3">
+    <!-- When the user clicks the checkbox:
+          If the checkbox is checked, isChecked becomes true.
+          If the checkbox is unchecked, isChecked becomes false.
+          This change is automatic because of Angular's two-way data binding. -->
+    <input type="checkbox" [(ngModel)]="isCheckedBool" />
+    {{ isCheckedBool }}
+  </div>
+  <br />
+  <div class="col-3">
+    <input type="text" [(ngModel)]="div4Classname" />
+  </div>
+</div>
+<br />
+<h3>NgStyle</h3>
+<br />
