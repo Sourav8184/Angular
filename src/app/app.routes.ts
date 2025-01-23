@@ -9,6 +9,7 @@ import { NgIfComponent } from './components/ngIf/ngIf.component';
 import { NgForComponent } from './components/ngFor/ngFor.component';
 import { ControlStatementComponent } from './components/controlStatement/controlStatement.component';
 import { SignalComponent } from './components/signal/signal.component';
+import { LinkedComponent } from './components/linked/linked.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,4 +23,5 @@ export const routes: Routes = [
   { path: 'ngIf', component: NgIfComponent },
   { path: 'control-flow', component: ControlStatementComponent },
   { path: 'signal', component: SignalComponent },
+  { path: 'linked', component: LinkedComponent },
 ];
