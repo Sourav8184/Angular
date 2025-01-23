@@ -10,6 +10,7 @@ import { NgForComponent } from './components/ngFor/ngFor.component';
 import { ControlStatementComponent } from './components/controlStatement/controlStatement.component';
 import { SignalComponent } from './components/signal/signal.component';
 import { LinkedComponent } from './components/linked/linked.component';
+import { TemplateComponent } from './components/template/template.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,4 +25,5 @@ export const routes: Routes = [
   { path: 'control-flow', component: ControlStatementComponent },
   { path: 'signal', component: SignalComponent },
   { path: 'linked', component: LinkedComponent },
+  { path: 'template', component: TemplateComponent },
 ];
