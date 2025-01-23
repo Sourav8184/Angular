@@ -11,6 +11,7 @@ import { ControlStatementComponent } from './components/controlStatement/control
 import { SignalComponent } from './components/signal/signal.component';
 import { LinkedComponent } from './components/linked/linked.component';
 import { TemplateComponent } from './components/template/template.component';
+import { ReactiveComponent } from './components/reactive/reactive.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,4 +27,5 @@ export const routes: Routes = [
   { path: 'signal', component: SignalComponent },
   { path: 'linked', component: LinkedComponent },
   { path: 'template', component: TemplateComponent },
+  { path: 'reactive', component: ReactiveComponent },
 ];
